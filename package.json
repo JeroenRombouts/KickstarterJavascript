@@ -1,0 +1,14 @@
+{
+    "name": "jest-excercises",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --watchAll"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "jest-cli": "^23.5.0"
+    }
+}

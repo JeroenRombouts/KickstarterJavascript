@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Fetch json example</title>
+</head>
+
+<body>
+    <h1>Fetch json example</h1>
+    <ul>
+    </ul>
+
+</body>
+<script>
+    var myList = document.querySelector('ul');
+    fetch('https://baconipsum.com/api/?type=meat-and-filler')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(json) {
+            for (var i = 0; i < json.length; i++) {
+                var listItem = document.createElement('li');
+                listItem.innerHTML = '<strong>' + json[i] + '</strong>';
+                myList.appendChild(listItem);
+            }
+        });
+</script>
+
+</html>
